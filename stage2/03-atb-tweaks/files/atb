@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#
+# Description:
+#   Script will remove mongod.lock file and start ATB.
+#
+
+function main() {
+  rm /var/lib/mongodb/mongod.lock
+  java -jar /usr/bin/atb-service.jar
+}
+
+main
+

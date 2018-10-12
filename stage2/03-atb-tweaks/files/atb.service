@@ -1,0 +1,11 @@
+[Unit]
+Description=ATB service
+After=network.target mongodb.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/atb
+
+[Install]
+WantedBy=multi-user.target
+
